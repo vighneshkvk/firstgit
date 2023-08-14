@@ -89,5 +89,16 @@ var itemList=document.querySelector('#items');
 // lastchild
 // console.log(itemList.lastChild);
 // lastelementchild
-console.log(itemList.lastElementChild);
-itemList.lastElementChild.textContent='hello4';
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent='hello4';
+
+// nextsibling
+// console.log(itemList.nextSibling);
+// nextelementsibling
+// console.log(itemList.nextElementSibling);
+
+// previous sibling
+console.log(itemList.previousSibling);
+// previouselement sibling
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color='red';
