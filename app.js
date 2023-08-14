@@ -72,9 +72,22 @@ var itemList=document.querySelector('#items');
 // childnode
 // console.log(itemList.childNodes); not recommended because it return empty space or line break also so use children node 
 
-console.log(itemList.children);
-itemList.children[1].style.backgroundColor='yellow';
+// console.log(itemList.children);
+// itemList.children[1].style.backgroundColor='yellow';
 
+// // firstelementchild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent='hello';
+
+// firstchild
+// console.log(itemList.firstChild);
 // firstelementchild
-console.log(itemList.firstElementChild);
-itemList.firstElementChild.textContent='hello';
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent='hello1';
+
+
+// lastchild
+// console.log(itemList.lastChild);
+// lastelementchild
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent='hello4';
