@@ -98,7 +98,30 @@ var itemList=document.querySelector('#items');
 // console.log(itemList.nextElementSibling);
 
 // previous sibling
-console.log(itemList.previousSibling);
+// console.log(itemList.previousSibling);
 // previouselement sibling
-console.log(itemList.previousElementSibling);
-itemList.previousElementSibling.style.color='red';
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color='red';
+
+
+
+
+// create elemnt
+// create a div
+var newDiv=document.createElement('div');
+newDiv.className='hello';
+newDiv.id='hello1';
+newDiv.setAttribute('title','Hello Div');
+
+// create textnode
+var newDivText=document.createTextNode('hello world');
+
+// add text to div
+newDiv.appendChild(newDivText);
+
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+
+console.log(newDiv);
+
+container.insertBefore(newDiv,h1);
