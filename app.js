@@ -42,11 +42,29 @@
 // thirdItem.style.display='none';
 
 // queryselectorall
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for(var i=0;i<odd.length;i++)
-{
-    odd[i].style.backgroundColor='green';
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for(var i=0;i<odd.length;i++)
+// {
+//     odd[i].style.backgroundColor='green';
+// }
 
-var secondli = document.querySelectorAll('.list-group-item');
-secondli[1].style.color='green';
+// var secondli = document.querySelectorAll('.list-group-item');
+// secondli[1].style.color='green';
+
+
+
+
+
+
+
+// traversing the node
+var itemList=document.querySelector('#items');
+// parentnode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor='grey';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// parentelement
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor='grey';
+console.log(itemList.parentElement.parentElement);
