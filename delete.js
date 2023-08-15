@@ -60,11 +60,12 @@ function removeItem(e){
 function filterItems(e){
     var text=e.target.value.toLowerCase();
     
-    var items=document.getElementsByTagName('li');
+    var items=itemList.getElementsByTagName('li');
     // convert to array since it is in html collection
     Array.from(items).forEach(function(item){
         var itemName=item.firstChild.textContent;
-        if(itemName.toLocaleLowerCase().indexOf(text) != -1){
+        var itemName2=item.childNodes[1].textContent;
+        if(itemName.toLocaleLowerCase().indexOf(text) != -1 || itemName2.toLocaleLowerCase().indexOf(text) != -1){
             item.style.display='block';
         }
         else{
