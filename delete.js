@@ -1,11 +1,15 @@
 var form=document.getElementById('addForm');
 var itemList=document.getElementById('items');
+var filter=document.getElementById('filter');
 
 // form submit event
 form.addEventListener('submit',addItem);
 
 // delete event
 itemList.addEventListener('click',removeItem);
+
+// filter element
+filter.addEventListener('keyup',filterItems);
 
 
 // add item fn
@@ -32,6 +36,7 @@ function addItem(e){
     itemList.appendChild(li);
 }
 
+// remove fn
 function removeItem(e){
     if(e.target.classList.contains('delete'))
     {
@@ -41,4 +46,22 @@ function removeItem(e){
             itemList.removeChild(li);
         }
     }
+}
+
+
+// fiter fn
+function filterItems(e){
+    var text=e.target.value.toLowerCase();
+    
+    var items=document.getElementsByTagName('li');
+    // convert to array since it is in html collection
+    Array.from(items).forEach(function(item){
+        var itemName=item.firstChild.textContent;
+        if(itemName.toLocaleLowerCase().indexOf(text) != -1){
+            item.style.display='block';
+        }
+        else{
+            item.style.display='none'; 
+        }
+    });
 }
