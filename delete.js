@@ -17,14 +17,20 @@ function addItem(e){
     e.preventDefault();
 
     //getinput value
-    var newItem=document.getElementById('item').value; 
+    var newItem=document.getElementById('item').value;
+    var new2=document.getElementById('des').value; 
 
-    // ccreate new li
-    var li=document.createElement('li')
+    // create new li
+    var li=document.createElement('li');
+    
+
     // add class name
     li.className='list-group-item';
+    
+
     // add text node with input value
     li.appendChild(document.createTextNode(newItem));
+    li.appendChild(document.createTextNode(new2));
 
     // create delete btn
     var deletebtn=document.createElement('button');
@@ -34,6 +40,7 @@ function addItem(e){
 
 
     itemList.appendChild(li);
+   
 }
 
 // remove fn
